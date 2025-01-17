@@ -1,0 +1,1302 @@
+-@font-face{
+    src: "fonts/Monotype  - Gill Sans Nova Medium.ttf";
+    font-family: Gill Sans Nova;
+}
+--
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Universal Variables */
+:root {
+  --topgap: 18vh;
+  --linespacing: 20px;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Removes all underlines from links*/
+* a{
+  text-decoration: none;
+  color: black;
+}
+
+* a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body{
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* */
+
+
+/* Grid for page setup */
+.grid-container {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: grid;
+  position: relative;
+  grid-template-columns: 3fr 6fr;
+  grid-column-gap: 20px;
+  }
+
+  .project-grid-container {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 3fr 6fr;
+    grid-column-gap: 20px;
+  }
+
+
+/* All Sidebar divs */
+.sidebar {
+  background-image: linear-gradient(90deg, #70a464 40%, white);
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  height: 100%;
+  width: 400px;
+  position: fixed;
+}
+
+ /* Subpage Sidebar  */
+.project-sidebar {
+  background-image: linear-gradient(90deg, #70a464 40%, white);
+  display: grid;
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  grid-template-columns: 3fr 4fr;
+  row-gap: 17px;
+}
+.left-column {
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 20vh 44vh auto;
+  padding-left: 25px;
+  /* background-color: aqua; */
+}
+.project-left-column {
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 20vh 44vh auto;
+  padding-left: 25px;
+}
+.logo {
+  font-size: 2rem;
+  margin-top: 25px;
+  height: 18vh;
+  line-height: 1;
+  font-weight: 600;
+  /* background-color: blueviolet; */
+}
+.navigation {
+  line-height: 150%;
+  width: 100%;
+  height: 100%;
+  line-height: 200%;
+  font-size: 18px;
+  font-weight: 200;
+  /* background-color: yellow; */
+}
+
+ /* Subpage ul  */
+.about {
+  font-size: 18px;
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 200;
+  /* background-color: brown; */
+}
+.right-column{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: fuchsia; */
+}
+.project-right-column {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* background-color: fuchsia; */
+}
+.gap-above-changing-text{
+  height: 18vh;
+  /* background-color: salmon; */
+  opacity: 0;
+}
+.in-line-gap {
+  height: 40px;
+}
+.these{
+  font-size: 65px;
+  font-weight: 100;
+  /* background-color: red; */
+}
+.are{
+  font-size: 65px;
+  font-weight: 100;
+  /* background-color: orange; */
+}
+.my{
+  font-size: 65px;
+  font-weight: 100;
+  /* background-color: blue; */
+}
+
+.brackets {
+  font-size: 65px;
+  font-weight: 100;
+  /* background-color: pink; */
+}
+
+
+/* Main Content */
+.main {
+  background-image: linear-gradient(90deg, white 96%, #70a464 98%, white 100%);
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 430px;
+  height: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  /* padding-top: 15vh; */
+
+}
+
+.breakpoint-nav-overlay {
+  display: none;
+}
+ /* Subpage Main  */
+.project-main {
+  background-image: linear-gradient(90deg, white 96%, #70a464 98%, white 100%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 21vh auto;
+  z-index: 0;
+  position: relative;
+  top: 0;
+  left: 400px;
+  height: 100%;
+  min-width: 0%;
+  overflow: scroll;
+  padding-left: 20px;
+}
+
+.main-breakpoint-overlay-nav-options {
+  display: none;
+}
+
+
+.top-gap-in-main {
+  position: relative;
+  height: 21vh;
+  width: 100%;
+  /* background-color: blue; */
+}
+.breakpoint-margins {
+  display: none;
+}
+.container {
+  position: relative;
+  width: 95%;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  /* padding-top: 3vh; */
+  padding-right: 3vw;
+}
+.breakpoint-project-bio-container{
+  display:none;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.post {
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.post img{
+  outline: 2px black;
+}
+/* PROJECT BREAKPOINT */
+.project-breakpoint-grid-container {
+  display: none;
+}
+
+/* ABOUT PAGE */
+.henry-bio{
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.henry-blurb {
+  font-size: 30px;
+  font-weight: 100;
+}
+.henry-content {
+  /* display: grid; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  height: 80%;
+  max-width: 80%;
+  left: 5%;
+  gap: 20px;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+}
+.henry-content img{
+  max-width: 50%;
+  min-width: 400px;
+}
+.aboutpage-link-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.email {
+  font-size: 30px;
+  font-weight: 100;
+  /* padding-left: 20%; */
+  min-width: auto;
+  padding-bottom: 40px;
+}
+.resume-link {
+  font-size: 30px;
+  font-weight: 100;
+  /* padding-left: 20%; */
+  min-width: 400px;
+  padding-bottom: 25px;
+  width: 100%;
+}
+.resume {
+  width: 60%;
+  padding-bottom:20px;
+  padding-left: 20px;
+  min-width: 300px;
+}
+
+
+/* GENERAL SUBPAGE CSS */
+.gap-above-project-info {
+  height: 20vh;
+  width: 100%;
+}
+
+.project-info{
+  word-wrap: normal;
+  max-height: 100%;
+  /* background-color: greenyellow; */
+}
+
+.project-info h1{
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.project-info h2{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: medium;
+  padding-bottom: 6px;
+}
+
+.project-info p{
+  font-size: 14px;
+  font-weight: 300;
+  /* padding: 0px; */
+  line-height: 1.25;
+  border: none;
+  font-style: normal;
+}
+
+/* project info for january */
+.project-info-j h1{
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.project-info-j h2{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: medium;
+  padding-left: 3px;
+  padding-bottom: 6px;
+}
+
+.project-info-j p{
+  font-size: 14px;
+  font-weight: 300;
+  /* padding: 0px; */
+  line-height: 1.25;
+  border: none;
+  font-style: normal;
+}
+/* Specifc for JAPANVIDEO */
+
+.project-info{
+  word-wrap: normal;
+  max-height: 100%;
+  /* background-color: greenyellow; */
+}
+
+.japanvideo-project-info h1{
+  font-size: 30px;
+  font-weight: 300;
+  padding: 5px;
+  line-height: 1.25;
+}
+.japanvideo-project-info h2{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: medium;
+  padding: 5px;
+}
+
+.japanvideo-project-info p{
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px;
+  line-height: 1.25;
+  border: none;
+  font-style: normal;
+}
+
+/* */
+
+
+.gap-above-project-main { /* Gap above the project content, so that it aligns with the top of the text on the left */
+  height: 21.25vh;
+}
+
+.project-main {
+  /* background-image: linear-gradient(90deg, white 96%, #70a464 98%, white 100%);
+  display: grid;
+  grid-template-rows: 21.25vh auto;
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 67%;
+  min-width: 0%;
+  overflow: scroll;
+  padding-left: 20px; */
+
+  background-image: linear-gradient(90deg, white 96%, #70a464 98%, white 100%);
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 430px;
+  height: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  /* padding-top: 15vh; */
+}
+
+.breakpoint-project-text-column{
+  display: none;
+}
+
+.breakpoint-project-bio {
+  display: none;
+}
+
+.project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.project-content img{
+  max-width: 80%;
+}
+/* SSHERI Specific CSS */
+.ssheri-project-content{
+  position: relative;
+  display: grid;
+  max-width: 95%;
+  min-width: 20%;
+  left: 2%;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.ssheri-project-content img{
+  display: flex;
+  justify-content: center;
+  max-width: 90%;
+}
+/* Trope Specific CSS */
+.trope-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.trope-project-content img{
+  max-width: 80%;
+  width: 60%;
+}
+
+/* Kardashian Specific CSS */
+.kardashian-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.kardashian-project-content img{
+  /* max-width: 80%; */
+  width: auto;
+  height: auto;
+}
+
+.kardashian-gifs{
+  width: 480px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Ebadov Specific CSS */
+.ebadov-project-content{
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  max-width: 95%;
+  min-width: 20%;
+  height: 80%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.ebadov-project-content img{
+  width: 47%;
+  min-width: 370px;
+}
+
+/* Urnes Specific CSS */
+.urnes-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.urnes-project-content img{
+  width: 60%;
+  min-width: 250px;
+}
+/* Commission Specific CSS */
+.commission-project-content{
+  position: relative;
+  display: grid;
+  max-width: 95%;
+  min-width: 20%;
+  left: 2%;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.commission-project-content img{
+  display: flex;
+  justify-content: center;
+  max-width: 90%;
+}
+/* Snowfall Specific CSS */
+.snowfall-project-content{
+  position: relative;
+  display: grid;
+  max-width: 95%;
+  min-width: 20%;
+  left: 2%;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.snowfall-project-content img{
+  display: flex;
+  justify-content: center;
+  max-width: 95%;
+}
+/* Aging Eyes Specific CSS */
+.agingeyes-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.agingeyes-project-content img{
+  max-width: 60%;
+}
+
+/* Typography Book Specific CSS */
+.typographybook-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.typographybook-project-content img{
+  width: 400px  ;
+  margin-bottom: 20px;
+  border: 1px solid black;
+}
+
+/* Ralph Specific CSS */
+.ralph-project-content{
+  position: relative;
+  display: grid;
+  max-width: 95%;
+  min-width: 20%;
+  left: 2%;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.ralph-project-content img{
+  display: flex;
+  justify-content: center;
+  max-width: 95%;
+}
+
+/* Minicam Specific CSS */
+.minicam-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.minicam-project-content img{
+  width: 70%;
+}
+
+/* Art and Design Posters Specific CSS*/
+
+.ad-project-content{ /* IMAGE SETTINGS FOR A&D PROJECT */
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.ad-project-content img{
+  width: 400px;
+  border: 1px solid black;
+}
+
+/* Piercing specific CSS */
+.piercing-project-content{
+  position: relative;
+  display: flex;
+  max-width: 91%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.piercing-breakpoint-project-content {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.piercing-breakpoint-project-main img{ /* Added an image border */
+  border: solid black .5px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.piercing-breakpoint-project-main { /* No changes to normal layout */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 100%;
+  height: 80%;
+  width: 100%;
+  gap: 15px;
+
+}
+/* Drawing Specific CSS */
+.drawing-project-content{
+  position: relative;
+  display: flex;
+  max-width: 95%;
+  min-width: 20%;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.drawing-project-content img{
+  width: 50%;
+  border: 1px solid black;
+}
+
+/* HAMBURGER BAR */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+
+/* MOBILE BREAKPOINT MAIN PAGE*/
+@media screen and (max-width: 680px) {
+  .grid-container{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: grid;
+    display: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 34vh 66vh;
+    }
+    .sidebar{
+      background-image: linear-gradient(180deg, #70a464 40%, white); /* Gradient goes from top to bottom */
+      display: grid;
+      position: fixed;
+      width: 100%;
+      height: 25%;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 2fr;
+    }
+    .left-column {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 100%;
+      width: 100%;
+      padding-left:0;
+
+      /* background-color: aqua; */
+    }
+    .logo {
+      position: relative;
+      font-size: 2rem;
+      margin-top: 20px;
+      height: 100%;
+      line-height: 1;
+      font-weight: 600;
+      z-index: 5;
+      padding-left: 20px;
+      /* background-color: blueviolet; */
+    }
+    .main-page-top-bar-gap{
+      width: 20px;
+      height:100%;
+    }
+    .navigation{
+      display: none;
+    }
+    .about{
+      display: none;
+    }
+    .right-column {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 100%;
+      width: 100%;
+    }
+    .breakpoint-gap{
+      width: 20px;
+    }
+    .gap-above-changing-text{
+      display: none;
+    }
+    .in-line-gap {
+      display: none;
+    }
+    .these{
+      display: flex;
+      align-items: center;
+      text-align: left;
+      font-size: 30px;
+      font-weight: 100;
+      padding-top: 10px;
+    }
+    .are{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-size: 30px;
+      font-weight: 100;
+      padding-top: 10px;
+    }
+    .my{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-size: 30px;
+      font-weight: 100;
+      padding-top: 10px;
+    }
+    .brackets {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-size: 30px;
+      font-weight: 100;
+      width: auto;
+      padding-top: 10px;
+    }
+    .main {
+      background-image: none;
+      z-index: 0;
+      position: fixed;
+      top: 25%;
+      left: 0;
+      width: 100%;
+      height: 75%;
+      max-width: 100%;
+      max-height: 75%;
+      padding-right: 20px;
+      overflow: scroll;
+      padding-top: 0;
+    }
+    .top-gap-in-main {
+      display:none;
+    }
+    .container {
+      padding-left: 20px;
+      position: relative;
+      width: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .container img{
+      width: 100%;
+    }
+    /* LAYOUT RESET */
+    .project-grid-container {
+      display: none;
+    }
+    .project-main {
+      display: none;
+    }
+
+    /* BREAKPOINT LAYOUT CSS */
+    .project-breakpoint-grid-container {
+      display: grid;
+      position: relative;
+      grid-template-rows: 15% 85%;
+      grid-template-columns: 1fr;
+      width: 100%;
+      height: 100%;
+    }
+    .project-breakpoint-top-bar {
+      display: flex;
+      position: fixed;
+      height: 15%;
+      min-height: 15%;
+      width: 100%;
+      z-index: 3;
+      justify-content: space-between;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-image: linear-gradient(180deg, #70a464 40%, white); /* Gradient goes from top to bottom */
+    }
+    .project-breakpoint-logo {
+      position: relative;
+      font-size: 2rem;
+      margin-top: 20px;
+      margin-left: 0;
+      padding-left: 20px;
+      height: 100%;
+      line-height: 1;
+      font-weight: 600;
+      z-index: 5;
+    }
+
+    .breakpoint-project-main {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 100%;
+      height: 80%;
+      width: 100%;
+    }
+    .breakpoint-project-main img{
+      box-sizing: border-box;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+
+    .bottom-padding{
+      display: block;
+      height: 20px;
+      width: 100%;
+    }
+
+    /* IMAGE CHANGES FOR SPECIFIC SUBPAGES */
+    /* Typography */
+    .typography-breakpoint-project-main{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 100%;
+      height: 80%;
+      width: 100%;
+      gap: 15px;
+    }
+
+    .typography-breakpoint-project-main img{
+      border: solid black 1px;
+      box-sizing: border-box;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    /* Kardashian */
+    .kardashian-breakpoint-project-main {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-top: 5%;
+      top: 100%;
+      max-height: 80%;
+      width: 100%;
+    }
+
+    .kardashian-breakpoint-project-main img{
+      /* padding-bottom: 20px; */
+    }
+
+    .kardashian-gap {
+      height: 20px;
+      width: 100%;
+    }
+    .breakpoint-kardashian-gifs{
+      max-width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .breakpoint-youtube-kardashian{
+      position: relative;
+      box-sizing: border-box;
+    }
+
+
+    .breakpoint-youtube-kardashian iframe{
+      top:0;
+      left: 0;
+      max-width: 100%;
+      height: 35%;
+      padding-bottom: 20px;
+    }
+
+    /* Crud and Japan Video */
+    .breakpoint-youtube {
+      position: relative;
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+
+    .breakpoint-youtube iframe{
+      top:0;
+      left: 0;
+      max-width: 100%;
+      height: 200%;
+      padding-bottom: 20px;
+    }
+    /* A&D */
+    .ad-breakpoint-project-main img{ /* Added an image border */
+      border: solid black 1px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-bottom: 20px;
+    }
+    .ad-breakpoint-project-main { /* No changes to normal layout */
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 100%;
+      height: 80%;
+      width: 100%;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .project-breakpoint-info {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      height: auto;
+      line-height: 1.25;
+      padding-bottom: 7px;
+    }
+
+    .project-breakpoint-info h1 {
+      font-size: 20px;
+      font-weight: 600;
+      padding-bottom: 10px;
+    }
+    .project-breakpoint-info h2 {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: italic;
+      padding-bottom: 10px;
+    }
+
+    .project-breakpoint-info p {
+      font-size: 16px;
+      font-weight: 100;
+      font-style: normal;
+      padding-bottom: 10px;
+    }
+
+    .project-breakpoint-images img {
+      box-sizing: border-box;
+      width: 100%;
+      padding-right: 20px;
+      padding-bottom: 20px;
+    }
+
+    /* SPECIFIC FOR KARDASHIAN GIFS */
+
+
+    /* SPECIFC FOR THE ABOUT PAGE */
+    .breakpoint-email {
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 20px;
+      font-weight: 100;
+      padding-left: 0;
+      height: 200px;
+      min-width: auto;
+    }
+    .breakpoint-email p{
+      padding-left: 20px;
+    }
+
+    .breakpoint-email a{
+      padding-left: 20px;
+    }
+    .breakpoint-resume-link{
+      box-sizing: border-box;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 20px;
+      font-weight: 100;
+      padding-left: 0;
+      padding-bottom: 20px;
+      min-width: auto;
+    }
+    .breakpoint-resume-link{
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+
+    .about-project-breakpoint-info {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      line-height: 1.25;
+    }
+    .about-project-breakpoint-info p {
+      font-size: 20px;
+      font-weight: 200;
+    }
+    .project-breakpoint-info {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      /* padding-left: 5%;
+      padding-right: 5%; */
+      line-height: 1.25;
+    }
+    .hamburger{
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: right;
+      width: 30px;
+      height: 60px;
+      gap: 5px;
+      z-index: 5;
+      padding-top: 25px;
+      padding-right: 20px;
+    }
+
+    .bar {
+      width: 100%;
+      height: 4px;
+      background-color: black;
+    }
+
+    .breakpoint-nav-overlay {
+      position: fixed;
+      display: none;
+      height: 85%;
+      width: 100%;
+      top: 15%;
+      z-index: 3;
+      background-image: linear-gradient(180deg,white, #70a464 10%, #70a464 90%, white);
+      opacity: 99%;
+      transition: 0.3s;
+    }
+
+    .breakpoint-overlay-nav-options {
+      position: relative;
+      top: 13%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 25px;
+      font-weight: 100;
+      padding-left: 20px;
+    }
+
+    /* .breakpoint-overlay-nav-options a{
+      display: none;
+      position: relative;
+    } */
+
+    .hamburger .bar, .hamburger:after, .hamburger:before{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: black;
+      transition: 0.4s;
+    }
+
+    .hamburger.is-active:before{
+      transform: rotate(-45deg) translate(-9px, 6px)
+    }
+
+    .hamburger.is-active:after{
+      transform: rotate(-45deg) translate(-9px, 6px)
+    }
+
+    .hamburger.is-active .bar {
+      opacity: 0;
+    }
+
+    .breakpoint-nav-overlay.active {
+      position: fixed;
+      display: flex;
+      height: 85%;
+      width: 100%;
+      top: 15%;
+      z-index: 3;
+      background-image: linear-gradient(180deg,white, #70a464 10%, #70a464 60%, white);
+      opacity: 99%;
+      transition: 0.3s;
+    }
+
+
+    /* HAMBURGER BAR ADJUSTED TO TOP BAR ON MAIN PAGE */
+    .main-breakpoint-nav-overlay{
+      position: fixed;
+      display: none;
+      height: 75%;
+      width: 100%;
+      top: 25%;
+      z-index: 3;
+      background-image: linear-gradient(180deg,white, #70a464 10%, #70a464 90%, white);
+      opacity: 99%;
+      transition: 0.3s;
+    }
+
+    .main-breakpoint-overlay-nav-options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding-left: 20px;
+      font-size: 25px;
+      font-weight: 100;
+      padding-top: 50px;
+    }
+
+    /* .main-breakpoint-overlay-nav-options.active {
+      position: relative;
+      top: 13%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 25px;
+      font-weight: 100;
+      padding-left: 20px;
+    }
+     */
+    .main-breakpoint-nav-overlay.active {
+      position: fixed;
+      display: flex;
+      height: 75%;
+      width: 100%;
+      top: 25%;
+      z-index: 3;
+      background-image: linear-gradient(180deg,white, #70a464 10%, #70a464 60%, white);
+      opacity: 99%;
+      transition: 0.5s;
+    }
+
+
+  }
