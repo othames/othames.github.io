@@ -432,7 +432,7 @@ svg {
   line-height: 1.25;
 }
 .japanvideo-project-info h2{
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   font-weight: medium;
   padding: 5px;
@@ -1091,7 +1091,7 @@ svg {
       padding-bottom: 10px;
     }
     .project-breakpoint-info h2 {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 500;
       font-style: italic;
       padding-bottom: 10px;
