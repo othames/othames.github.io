@@ -309,7 +309,7 @@ svg {
 }
 
 .henry-blurb {
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 100;
 }
 .henry-content {
@@ -377,10 +377,11 @@ svg {
 }
 
 .project-info h2{
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   font-weight: medium;
   padding-bottom: 6px;
+  padding-top: 4px;
 }
 
 .project-info p{
@@ -400,11 +401,12 @@ svg {
 }
 
 .project-info-j h2{
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   font-weight: medium;
   padding-left: 3px;
   padding-bottom: 6px;
+  padding-top: 4px;
 }
 
 .project-info-j p{
