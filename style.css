@@ -309,7 +309,7 @@ svg {
 }
 
 .henry-blurb {
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 100;
 }
 .henry-content {
@@ -351,7 +351,7 @@ svg {
   width: 100%;
 }
 .resume {
-  width: 60%;
+  width: 80%;
   padding-bottom:20px;
   padding-left: 20px;
   min-width: 300px;
@@ -377,11 +377,10 @@ svg {
 }
 
 .project-info h2{
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
   font-weight: medium;
   padding-bottom: 6px;
-  padding-top: 4px;
 }
 
 .project-info p{
@@ -401,12 +400,11 @@ svg {
 }
 
 .project-info-j h2{
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
   font-weight: medium;
   padding-left: 3px;
   padding-bottom: 6px;
-  padding-top: 4px;
 }
 
 .project-info-j p{
@@ -432,7 +430,7 @@ svg {
   line-height: 1.25;
 }
 .japanvideo-project-info h2{
-  font-size: 14px;
+  font-size: 18px;
   font-style: italic;
   font-weight: medium;
   padding: 5px;
@@ -497,6 +495,18 @@ svg {
   padding-bottom: 20px;
 }
 
+.project-content a{
+  text-decoration: underline;
+  color: blue;
+}
+
+.breakpoint-youtube a{
+  text-decoration: underline;
+  color: blue;
+  display: flex;
+  justify-content: center;
+}
+
 .project-content img{
   max-width: 80%;
 }
@@ -551,6 +561,16 @@ svg {
   height: auto;
 }
 
+.fitzcovid-gif{
+  width: 315;
+  min-width: 315;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  gap: 20px;
+}
+
 .kardashian-gifs{
   width: 480px;
   height: auto;
@@ -577,6 +597,25 @@ svg {
 .ebadov-project-content img{
   width: 47%;
   min-width: 370px;
+}
+
+/* Fitzco Status Specific CSS */
+.fitzcostat-project-content{
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  max-width: 95%;
+  min-width: 30%;
+  height: 80%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.fitzcostat-project-content img{
+  width: 47%;
 }
 
 /* Urnes Specific CSS */
@@ -742,6 +781,7 @@ svg {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding-top: 1%;
   top: 100%;
   height: 80%;
   width: 100%;
@@ -817,6 +857,7 @@ svg {
       padding-left: 20px;
       /* background-color: blueviolet; */
     }
+
     .main-page-top-bar-gap{
       width: 20px;
       height:100%;
@@ -905,7 +946,7 @@ svg {
       position: relative;
       width: auto;
       display: flex;
-      align-items: center;
+      vertical-align: top;
       gap: 20px;
       padding-left: 20px;
       padding-right: 20px;
@@ -960,8 +1001,10 @@ svg {
       display: flex;
       flex-direction: column;
       position: relative;
+      padding-top: 1%;
       top: 100%;
       height: 80%;
+      max-width: 600px;
       width: 100%;
     }
     .breakpoint-project-main img{
@@ -984,6 +1027,7 @@ svg {
       display: flex;
       flex-direction: column;
       position: relative;
+      padding-top: 1%;
       top: 100%;
       height: 80%;
       width: 100%;
@@ -1002,7 +1046,7 @@ svg {
       display: flex;
       flex-direction: column;
       position: relative;
-      padding-top: 5%;
+      padding-top: 1%;
       top: 100%;
       max-height: 80%;
       width: 100%;
@@ -1025,16 +1069,23 @@ svg {
     }
 
     .breakpoint-youtube-kardashian{
-      position: relative;
-      box-sizing: border-box;
     }
 
 
     .breakpoint-youtube-kardashian iframe{
       top:0;
+      /* left: 0; */
+      width: 100%;
+      height: 35%;
+      padding-bottom: 20px;
+    }
+
+    /* Birds Music Video Breakpoint */
+    .breakpoint-birds iframe{
+      top:0;
       left: 0;
       max-width: 100%;
-      height: 35%;
+      height: 65%;
       padding-bottom: 20px;
     }
 
@@ -1050,8 +1101,8 @@ svg {
     .breakpoint-youtube iframe{
       top:0;
       left: 0;
-      max-width: 100%;
-      height: 200%;
+      width: 100%;
+      /* height: 200%; */
       padding-bottom: 20px;
     }
     /* A&D */
@@ -1091,7 +1142,7 @@ svg {
       padding-bottom: 10px;
     }
     .project-breakpoint-info h2 {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
       font-style: italic;
       padding-bottom: 10px;
@@ -1111,8 +1162,22 @@ svg {
       padding-bottom: 20px;
     }
 
-    /* SPECIFIC FOR KARDASHIAN GIFS */
+    .project-breakpoint-images iframe {
+      box-sizing: border-box;
+      width: 100%;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      display: flex;
+    }
 
+    /* SPECIFIC FOR FITZCO-VIDEOS MOBILE BREAKPOINT */
+
+    .breakpoint-youtube-kardashian iframe {
+      width: 100%;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      display: flex;
+    }
 
     /* SPECIFC FOR THE ABOUT PAGE */
     .breakpoint-email {
